@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Resume Input Form</h2>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="phone">Phone No:</label>
+            <input type="text" id="phone" name="phone" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="linkedin">LinkedIn URL:</label>
+            <input type="url" id="linkedin" name="linkedin"><br>
+
+            <label for="objective">Career Objective:</label>
+            <textarea id="objective" name="objective"></textarea><br>
+
+            <label for="certification">Certifications:</label>
+            <textarea id="certification" name="certification"></textarea><br>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education"></textarea><br>
+
+            <label for="skills">Skills (comma separated):</label>
+            <input type="text" id="skills" name="skills"><br>
+
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" name="experience"></textarea><br>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div class="resume-container">
+        <h1>Dynamic Resume</h1>
+        <div class="left-section">
+            <img src="download.jfif" alt="profile picture" class="profile-picture">
+            <section id="displayObjective">
+                <h3>Career Objective</h3>
+                <p id="objectiveText"></p>
+                <button id="editObjective" class="edit-button">Edit</button>
+            </section>
+
+            <section id="displayCertification">
+                <h3>Certifications</h3>
+                <p id="certificationText"></p>
+                <button id="editCertification" class="edit-button">Edit</button>
+            </section>
+        </div>
+
+        <div class="right-section">
+            <section id="personalInfo">
+                <h3>Personal Information</h3>
+                <p>Name: <b id="nameText"></b></p>
+                <p>Phone No: <b id="phoneText"></b></p>
+                <p>Email: <b id="emailText"></b></p>
+                <p>LinkedIn: <b id="linkedinText"></b></p>
+                <button id="editPersonalInfo" class="edit-button">Edit</button>
+            </section>
+
+            <section id="displayEducation">
+                <h3>Education</h3>
+                <p id="educationText"></p>
+                <button id="editEducation" class="edit-button">Edit</button>
+            </section>
+
+            <section id="displaySkills">
+                <h3>Skills</h3>
+                <ul id="skillsList"></ul>
+                <button id="editSkills" class="edit-button">Edit</button>
+            </section>
+
+            <section id="displayExperience">
+                <h3>Work Experience</h3>
+                <p id="experienceText"></p>
+                <button id="editExperience" class="edit-button">Edit</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
